@@ -1,3 +1,3 @@
 source 'http://www.rubygems.org'
 
-gem 'sinatra'
+gem 'sinatra', require: 'sinatra/base'
