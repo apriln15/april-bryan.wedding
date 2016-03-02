@@ -10,6 +10,5 @@ class App < Sinatra::Application
   end
 
   post '/message' do
-    
   end
 end
