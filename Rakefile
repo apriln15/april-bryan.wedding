@@ -1,8 +1,5 @@
-require './app'
-
 task default: [] do
 end
-
 
 namespace :server do
   desc "Starts the server"

@@ -1,4 +1,2 @@
 #!/bin/sh
-
-echo "** Starting the development web server..."
-RACK_ENV="development" rackup config.ru
+RACK_ENV="development" NUM_WORKERS=1 MAX_THREADS=2 foreman start

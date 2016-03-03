@@ -1,7 +1,9 @@
 source 'http://www.rubygems.org'
 
 gem 'rake'
-gem 'sinatra', require: 'sinatra/base'
+gem 'sinatra'
+gem 'sinatra-contrib'
+gem 'foreman'
 
 group :production do
   gem 'puma'
