@@ -4,7 +4,7 @@ class App < Sinatra::Application
   end
 
   get '/' do
-    send_file 'views/index.html'
+    erb :index
   end
 
   post '/message' do
