@@ -1,9 +1,5 @@
-task default: [] do
-end
+# Asset Pipeline
+require 'sinatra/asset_pipeline/task'
+require './app'
 
-namespace :server do
-  desc "Starts the server"
-  task :start do
-    exec "sh ./bin/server"
-  end
-end
+Sinatra::AssetPipeline::Task.define! App
