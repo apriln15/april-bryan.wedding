@@ -10,6 +10,7 @@ GEM
     foreman (0.78.0)
       thor (~> 0.19.1)
     hike (1.2.3)
+    json (1.8.3)
     multi_json (1.11.2)
     puma (3.2.0)
     rack (1.6.4)
@@ -50,6 +51,9 @@ GEM
       tilt (~> 1.1)
     thor (0.19.1)
     tilt (1.4.1)
+    uglifier (2.7.2)
+      execjs (>= 0.3.0)
+      json (>= 1.8.0)
 
 PLATFORMS
   ruby
@@ -58,9 +62,11 @@ DEPENDENCIES
   foreman
   puma
   rake
+  sass
   sinatra
   sinatra-asset-pipeline
   sinatra-contrib
+  uglifier
 
 BUNDLED WITH
    1.10.6
