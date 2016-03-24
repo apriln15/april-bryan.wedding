@@ -1,7 +1,30 @@
-$center: center;
 
 body {
-  text-align: $center;
+  text-align: center;
+  font-family: "adobe-garamond-pro";
+  font-size: 20px;
+}
+
+
+h1.fancy {
+  font-family: "leander-script-pro";
+  font-size: 96px;
+}
+
+h1 {
+  font-size: 72px;
+}
+
+h2 {
+  font-size: 64px;
+}
+
+h3 {
+  font-size: 48px;
+}
+
+h4 {
+  font-size: 36px;
 }
 
 h1, h2, h3, h4, h5, h6 {
