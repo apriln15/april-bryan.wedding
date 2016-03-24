@@ -29,12 +29,12 @@ class App < Sinatra::Application
 
   # TODO: Replace this with ERB version
   get '/' do
-    erb :index
+    send_file 'views/index.html'
   end
 
   # XXX: Fake version of site to test Sinatra out...
   get '/home' do
-    erb :home, layout: :application
+    erb :index, layout: :application
   end
 
   # TODO: Implement this...
