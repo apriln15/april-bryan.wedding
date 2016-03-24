@@ -1,32 +1,33 @@
+// Variables
+$headingFont: "leander-script-pro";
+$bodyFont: "adobe-garamond-pro";
+
 
 body {
   text-align: center;
-  font-family: "adobe-garamond-pro";
+  font-family: $bodyFont;
   font-size: 20px;
-}
 
+  h1 {
+    font-size: 72px;
+    &.fancy {
+      font-size: 96px;
+    }
+  }
 
-h1.fancy {
-  font-family: "leander-script-pro";
-  font-size: 96px;
-}
+  h2 {
+    font-size: 64px;
+  }
 
-h1 {
-  font-size: 72px;
-}
+  h3 {
+    font-size: 48px;
+  }
 
-h2 {
-  font-size: 64px;
-}
+  h4 {
+    font-size: 36px;
+  }
 
-h3 {
-  font-size: 48px;
-}
-
-h4 {
-  font-size: 36px;
-}
-
-h1, h2, h3, h4, h5, h6 {
-  font-family: "leander-script-pro";
+  h1, h2, h3, h4, h5, h6 {
+    font-family: $headingFont;
+  }
 }
