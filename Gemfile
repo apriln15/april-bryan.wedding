@@ -1,7 +1,6 @@
 source 'http://www.rubygems.org'
 
 gem 'foreman'
-gem 'rake'
 gem 'sass'
 gem 'sinatra'
 gem 'sinatra-contrib'

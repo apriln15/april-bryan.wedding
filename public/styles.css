@@ -1,5 +1,7 @@
 body  {
   text-align: center;
+  color: #505050;
+  background-color: #8C9DA0;
 }
 
 li {
@@ -10,6 +12,9 @@ li {
   margin-bottom: 0;
 }
 
+a {
+  color: #2D5F68;
+}
 
 h1, h2, h3, h4, h5, h6 {
   font-family: "leander-script-pro";
