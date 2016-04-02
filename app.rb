@@ -27,13 +27,7 @@ class App < Sinatra::Application
     end
   end
 
-  # TODO: Replace this with ERB version
   get '/' do
-    send_file 'views/index.html'
-  end
-
-  # XXX: Fake version of site to test Sinatra out...
-  get '/home' do
     erb :index, layout: :application
   end
 
