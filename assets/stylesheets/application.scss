@@ -35,5 +35,58 @@ body {
 
   a {
     color: #2D5F68;
+    text-decoration: none;
+    &:hover {
+      color: #2D5F68;
+      font-weight: bold;
+    }
+    h4  {
+      color: #505050;
+      text-decoration: underline;
+    }
+  }
+
+  #party, #kids, #families {
+    li {
+      color: #2D5F68;
+    }
+  }
+
+  ul {
+    list-style: none;
+    li {
+      span {
+        font-size: 36px;
+        font-style: italic;
+        vertical-align: middle;
+      }
+      a {
+        display: inline-block;
+      }
+    }
+  }
+
+  #hotels {
+    ul {
+      list-style: circle;
+      text-align: left;
+    }
+  }
+
+  a.registry_link {
+    height: 100px;
+    width: 100px;
+    display: inline-flex;
+    align-items: center;
+    margin-left: auto;
+    margin-right: auto;
+    img#williams_sonoma {
+      width: 100px;
+      height: auto;
+    }
+    img#bbandb {
+      width: 100px;
+      height: auto;
+    }
   }
 }
