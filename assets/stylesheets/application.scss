@@ -2,13 +2,19 @@
 $headingFont: "leander-script-pro";
 $bodyFont: "adobe-garamond-pro";
 
+html, body {
+  height: 100%;
+}
 
 body {
   text-align: center;
   font-family: $bodyFont;
   font-size: 20px;
-  color: #505050;
+  // color: #505050;
+  color: white;
+  text-shadow: 1px 1px 1px black;
   background-color: #8C9DA0;
+  margin: 0;
 
   h1 {
     font-size: 72px;
@@ -40,15 +46,27 @@ body {
       color: #2D5F68;
       font-weight: bold;
     }
+
     h4  {
       color: #505050;
       text-decoration: underline;
     }
-  }
 
-  #party, #kids, #families {
-    li {
-      color: #2D5F68;
+    &.registry_link {
+      height: 100px;
+      width: 100px;
+      display: inline-flex;
+      align-items: center;
+      margin-left: auto;
+      margin-right: auto;
+      img#williams_sonoma {
+        width: 100px;
+        height: auto;
+      }
+      img#bbandb {
+        width: 100px;
+        height: auto;
+      }
     }
   }
 
@@ -66,27 +84,24 @@ body {
     }
   }
 
+  section {
+    display: flex;
+    align-items: center;
+    padding: 20px;
+    &.full-height {
+      min-height: 100%;
+    }
+  }
+  #party, #kids, #families {
+    li {
+      color: #2D5F68;
+    }
+  }
+
   #hotels {
     ul {
       list-style: circle;
       text-align: left;
-    }
-  }
-
-  a.registry_link {
-    height: 100px;
-    width: 100px;
-    display: inline-flex;
-    align-items: center;
-    margin-left: auto;
-    margin-right: auto;
-    img#williams_sonoma {
-      width: 100px;
-      height: auto;
-    }
-    img#bbandb {
-      width: 100px;
-      height: auto;
     }
   }
 }

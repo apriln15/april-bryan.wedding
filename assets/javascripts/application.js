@@ -1,1 +1,3 @@
+//= require ./parallax
+
 window.Wedding = {};
