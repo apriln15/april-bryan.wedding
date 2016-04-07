@@ -38,15 +38,15 @@ body {
   }
 
   a {
-    color: #2D5F68;
+    color: white;
     text-decoration: none;
     &:hover {
-      color: #2D5F68;
+      color: white;
       font-weight: bold;
     }
 
     h4  {
-      color: #505050;
+      color: white;
       text-decoration: underline;
     }
 
@@ -93,7 +93,7 @@ body {
 
   #party, #kids, #families {
     li {
-      color: #2D5F68;
+      color: white;
     }
   }
 
