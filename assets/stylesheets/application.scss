@@ -103,6 +103,10 @@ body {
     }
   }
 
+  input[type='submit'] {
+    background-color: white;
+  }
+
   #footer {
     background-image: url("/images/pics_of_us/bridge.jpg");
     background-repeat: no-repeat;
