@@ -10,7 +10,8 @@ body {
   text-align: center;
   font-family: $bodyFont;
   font-size: 20px;
-  color: white;
+  color: #FFEEDE;
+  text-shadow: 1px 1px 1px black;
   background-color: #8C9DA0;
   margin: 0;
 
@@ -38,15 +39,15 @@ body {
   }
 
   a {
-    color: white;
+    color: #FFEEDE;
     text-decoration: none;
     &:hover {
-      color: white;
+      color: #324172;
       font-weight: bold;
     }
 
     h4  {
-      color: white;
+      color: #FFEEDE;
       text-decoration: underline;
     }
 
@@ -93,7 +94,7 @@ body {
 
   #party, #kids, #families {
     li {
-      color: white;
+      color: #FFEEDE;
     }
   }
 
