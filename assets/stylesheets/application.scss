@@ -10,7 +10,7 @@ body {
   text-align: center;
   font-family: $bodyFont;
   font-size: 20px;
-  color: #505050;
+  color: white;
   background-color: #8C9DA0;
   margin: 0;
 
@@ -90,6 +90,7 @@ body {
       min-height: 100%;
     }
   }
+
   #party, #kids, #families {
     li {
       color: #2D5F68;
