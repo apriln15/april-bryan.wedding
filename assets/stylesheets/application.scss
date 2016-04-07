@@ -10,10 +10,10 @@ body {
   text-align: center;
   font-family: $bodyFont;
   font-size: 20px;
-  color: #FFEEDE;
-  text-shadow: 1px 1px 1px black;
-  background-color: #8C9DA0;
+  color: white;
+  background-color: white;
   margin: 0;
+  text-shadow: 1px 1px 1px black;
 
   h1 {
     font-size: 72px;
@@ -85,11 +85,20 @@ body {
 
   section {
     display: flex;
-    align-items: center;
     padding: 20px;
+
     &.full-height {
       min-height: 100%;
     }
+
+    &.centered {
+      align-items: center;
+    }
+  }
+
+  .parallax-window {
+
+    -webkit-filter: blur(10px);
   }
 
   #party, #kids, #families {
