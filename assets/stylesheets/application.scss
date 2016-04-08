@@ -41,6 +41,7 @@ body {
   a {
     color: #FFEEDE;
     text-decoration: none;
+    position: relative;
     &:hover {
       color: #324172;
       font-weight: bold;
@@ -55,18 +56,22 @@ body {
         height: auto;
       }
       img#bbandb {
-        width: 100px;
+        width: 200px;
         height: auto;
       }
     }
   }
 
   #registry-info {
-    .left {
-      text-align: left;
-    }
-    .right {
-      text-align: right;
+    .columns {
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      a {
+        &:first-child {
+          margin-right: 20px;
+        }
+      }
     }
   }
 
