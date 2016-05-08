@@ -128,7 +128,8 @@ body {
   #hotels {
     ul {
       list-style: circle;
-      text-align: left;
+      list-style-position: inside;
+      text-align: center;
     }
   }
 }
