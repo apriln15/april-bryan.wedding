@@ -15,6 +15,40 @@ $darkSilverColor: #6D7678;
 $tealColor: #507889;
 $ivoryColor: #FFEDD8;
 
+@keyframes fade-content {
+  0% { background-color: rgba(0,0,0,1.0); }
+  100% { background-color: rgba(0,0,0,0.5); }
+}
+
+@keyframes show-nav {
+  0% {
+    background-color: rgba(109, 118, 120, 0);
+    height: 0;
+    opacity: 0;
+  }
+
+  100% {
+     background-color: rgba(109, 118, 120, 1);
+     height: 44px;
+     opacity: 1.0
+   }
+}
+
+@keyframes hide-nav {
+  0% {
+     background-color: rgba(109, 118, 120, 1);
+     height: 44px;
+     opacity: 1;
+   }
+
+  100% {
+    background-color: rgba(109, 118, 120, 0);
+    height: 0;
+    opacity: 0;
+  }
+
+}
+
 html, body {
   height: 100%;
 }
@@ -24,20 +58,20 @@ body {
   font-family: $bodyFont;
   font-size: 20px;
   color: $whiteColor;
-  background-color: $tealColor;
+  background-color: $darkSilverColor;
   margin: 0;
+  padding: 0;
 
   h1 {
-    font-size: 144px;
-    text-shadow: -2px 0px 5px black;
-    color: $lightSilverColor;
+    font-size: 128px;
+    color: $whiteColor;
     &.fancy {
       font-size: 96px;
     }
   }
 
   h2 {
-    font-size: 128px;
+    font-size: 96px;
   }
 
   h3 {
@@ -76,19 +110,6 @@ body {
     }
   }
 
-  #registry-info {
-    .columns {
-      display: flex;
-      align-items: center;
-      justify-content: center;
-      a {
-        &:first-child {
-          margin-right: 20px;
-        }
-      }
-    }
-  }
-
   ul {
     list-style: none;
     li {
@@ -103,8 +124,51 @@ body {
     }
   }
 
+  nav {
+    height: 0;
+    opacity: 0;
+    background-color: rgba(109, 118, 120, 1);
+    position: fixed;
+    width: 100%;
+    z-index: 1000;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    box-shadow: 0px 1px 4px $tealColor;
+    p {
+      line-height: 44px;
+      font-size: 36px;
+      margin-bottom: 0;
+    }
+    &.visible {
+      height: 44px;
+      animation: show-nav 0.25s;
+      opacity: 1.0;
+    }
+    &.hiding {
+      animation: hide-nav 0.25s;
+      height: 0;
+      opacity: 0;
+    }
+  }
+
   section {
     display: flex;
+
+    .faded-content {
+      &.reveal {
+        animation: fade-content 1s;
+      }
+
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      background-color: rgba(0,0,0,0.5);
+      position: absolute;
+      width: 100%;
+      height: 100%;
+      max-width: 100%;
+    }
 
     &.full-height {
       min-height: 100%;
@@ -118,61 +182,51 @@ body {
       align-items: center;
     }
 
-    .faded-content {
-      display: flex;
-      justify-content: center;
-      align-items: center;
-      background-color: rgba(0,0,0,0.5);
-      position: absolute;
-      width: 100%;
-      height: 100%;
-      max-width: 100%;
-    }
-
-  }
-
-  section:not(.parallax) {
-    color: $darkSilverColor;
-    background-color: $primaryBlueColor;
-    padding-top: 20px;
-    padding-bottom: 19px;
-    margin-bottom: 1px;
-    h2, h4 {
+    &:not(.parallax) {
       color: $darkSilverColor;
-    }
-    h2 {
-      margin-top: 10px;
-      // text-shadow: 1px 0px 1px rgba(0, 0, 0, 1.0);
-    }
+      background-color: $primaryColor;
+      align-content: center;
+      padding: 20px;
+      border-bottom: 1px solid $lightSilverColor;
 
-    p, a {
-      color: rgba(0, 0, 0, 0.5);
-      font-size: 24px;
-    }
-
-    a {
-      text-decoration: underline;
-      &:hover {
-        color: $tealColor;
+      h2, h4 {
+        color: $lightSilverColor;
       }
-    }
 
-    image-frame:first-child {
-      background-color: $ivoryColor;
-    }
-    .image-frame {
-      background-color: $lightSilverColor;
-      padding: 10px;
-      border-radius: 5px;
-      width: auto;
-      height: 500px;
-      margin-left: auto;
-      margin-right: auto;
-      margin-bottom: 40px;
-      img {
-        width: 940px;
-        max-height: 500px;
-        max-width: 960px;
+      p, a {
+        color: rgba(0, 0, 0, 0.5);
+        font-size: 24px;
+      }
+
+      a {
+        text-decoration: underline;
+        &:hover {
+          color: $tealColor;
+        }
+      }
+
+      .image-frame {
+        background-color: $lightSilverColor;
+        border-radius: 5px;
+        min-width: 100%;
+        min-height: 500px;
+        border: 10px solid $lightSilverColor;
+        background-position: center;
+        background-size: cover;
+        background-origin: padding-box;
+        background-repeat: no-repeat;
+
+        &.st-francis {
+          background-image: url('/images/locations/St_Francis.jpg');
+        }
+
+        &.the-laurel {
+          background-image: url('/images/locations/the_laurel.jpg');
+        }
+        img {
+          // max-height: 500px;
+          // max-width: 96/0px;
+        }
       }
     }
   }
@@ -181,15 +235,29 @@ body {
     background-color: white;
   }
 
-  #footer {
-    background-image: url("/images/pics_of_us/bridge.jpg");
-    background-repeat: no-repeat;
-    background-size: 100%;
-    background-position: center;
-    padding-bottom: 0;
+  #stories {
+    padding: 88px 20px;
+    .row {
+      display: flex;
+      justify-content: flex-start;
+      text-align: left;
+      align-items: center;
+    }
+    border-bottom: 1px solid $lightSilverColor;
+    h4 {
+      font-family: $bodyFont;
+      text-align: center;
+    }
   }
 
-  .parallax-window {
+  #ceremony, #locations {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+  }
+
+  #footer {
+    padding-bottom: 0;
   }
 
   #party, #kids, #families {
@@ -203,6 +271,19 @@ body {
       list-style: circle;
       list-style-position: inside;
       text-align: center;
+    }
+  }
+
+  #registry-info {
+    .columns {
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      a {
+        &:first-child {
+          margin-right: 20px;
+        }
+      }
     }
   }
 }
