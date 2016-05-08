@@ -6,6 +6,7 @@ Bundler.require(:default, ENV['RACK_ENV'])
 require 'sinatra/base'
 require 'sinatra/asset_pipeline'
 require "sinatra/reloader" if development?
+require "autoprefixer-rails"
 
 class App < Sinatra::Application
   configure do
@@ -14,11 +15,14 @@ class App < Sinatra::Application
     set :public_folder, './public'
 
     # Assets
+    set :sprockets, Sprockets::Environment.new
     set :assets_precompile, %w(application.js application.css *.png *.jpg *.svg *.eot *.ttf *.woff *.ico *.svg)
     set :assets_css_compressor, :sass
     set :assets_js_compressor, :uglifier
     set :assets_prefix, %w(assets)
     register Sinatra::AssetPipeline
+
+    AutoprefixerRails.install(sprockets)
 
     if defined?(RailsAssets)
       RailsAssets.load_paths.each do |path|

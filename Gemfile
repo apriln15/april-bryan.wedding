@@ -1,5 +1,6 @@
 source 'http://www.rubygems.org'
 
+gem 'autoprefixer-rails'
 gem 'foreman'
 gem 'sass'
 gem 'sinatra'
