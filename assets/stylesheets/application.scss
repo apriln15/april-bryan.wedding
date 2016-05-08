@@ -2,18 +2,16 @@
 $headingFont: "leander-script-pro";
 $bodyFont: "adobe-garamond-pro";
 
-// - OLD COLORS
-$primaryColor: #8C9DA0;
-$whiteColor: white;
-$darkGrayColor: rgba(0, 0, 0, 0.65);
-$blueColor: #324172;
-
-// - NEW COLORS
-$primaryBlueColor: #abbfc8;
+$primaryColor: #abbfc8;
 $lightSilverColor: #d7dfe3;
 $darkSilverColor: #6D7678;
 $tealColor: #507889;
 $ivoryColor: #FFEDD8;
+
+@keyframes appear {
+  0% { opacity: 0 }
+  100% { opacity: 1 }
+}
 
 @keyframes fade-content {
   0% { background-color: rgba(0,0,0,1.0); }
@@ -57,20 +55,21 @@ body {
   text-align: center;
   font-family: $bodyFont;
   font-size: 20px;
-  color: $whiteColor;
-  background-color: $darkSilverColor;
+  color: $darkSilverColor;
+  background-color: $lightSilverColor;
   margin: 0;
   padding: 0;
 
   h1 {
     font-size: 128px;
-    color: $whiteColor;
+    color: white;
     &.fancy {
       font-size: 96px;
     }
   }
 
   h2 {
+    color: white;
     font-size: 96px;
   }
 
@@ -128,17 +127,18 @@ body {
     height: 0;
     opacity: 0;
     background-color: rgba(109, 118, 120, 1);
+    // background-color: rgba(171, 191, 120, 1);
+
     position: fixed;
     width: 100%;
     z-index: 1000;
     display: flex;
     justify-content: center;
     align-items: center;
-    box-shadow: 0px 1px 4px $tealColor;
     p {
-      line-height: 44px;
-      font-size: 36px;
+      font-size: 28px;
       margin-bottom: 0;
+      color: white;
     }
     &.visible {
       height: 44px;
@@ -184,13 +184,13 @@ body {
 
     &:not(.parallax) {
       color: $darkSilverColor;
-      background-color: $primaryColor;
+      background-color: $lightSilverColor;
       align-content: center;
       padding: 20px;
       border-bottom: 1px solid $lightSilverColor;
 
       h2, h4 {
-        color: $lightSilverColor;
+        color: $tealColor;
       }
 
       p, a {
@@ -206,15 +206,15 @@ body {
       }
 
       .image-frame {
-        background-color: $lightSilverColor;
-        border-radius: 5px;
+        border-radius: 4px;
         min-width: 100%;
         min-height: 500px;
-        border: 10px solid $lightSilverColor;
+        border: 10px solid white;
         background-position: center;
         background-size: cover;
         background-origin: padding-box;
         background-repeat: no-repeat;
+
 
         &.st-francis {
           background-image: url('/images/locations/St_Francis.jpg');
@@ -256,13 +256,19 @@ body {
     justify-content: center;
   }
 
+  #header {
+    h1,h2{
+      animation: appear 1.0s;
+    }
+  }
+
   #footer {
     padding-bottom: 0;
   }
 
   #party, #kids, #families {
     li {
-      color: black;
+      color: $darkSilverColor;
     }
   }
 
