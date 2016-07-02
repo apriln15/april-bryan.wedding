@@ -2,6 +2,10 @@
   display: flex;
   align-items: center;
   justify-content: center;
+
+  .columns {
+    flex: 1 0 50%;
+  }
 }
 
 #hotels {
@@ -9,5 +13,18 @@
     list-style: circle;
     list-style-position: inside;
     text-align: center;
+  }
+}
+
+@media (max-width: 750px) {
+  .row:first-of-type {
+    flex-direction: column-reverse;
+  }
+
+  .row {
+    width: 100%;
+  }
+  .columns {
+    width: 100% !important;
   }
 }

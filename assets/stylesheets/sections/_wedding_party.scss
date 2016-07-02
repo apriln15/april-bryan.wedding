@@ -1,2 +1,13 @@
 #party, #kids, #families {
+  li {
+    display: flex;
+    align-items: center;
+  }
+  img {
+    border-radius: 37.5px;
+    vertical-align: middle;
+    margin-right: 15px;
+    height: 75px;
+    width: auto;
+  }
 }
