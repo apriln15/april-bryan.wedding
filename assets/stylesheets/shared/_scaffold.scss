@@ -23,14 +23,12 @@ body {
 
 h1 {
   font-size: 128px;
-  color: white;
   &.fancy {
     font-size: 96px;
   }
 }
 
 h2 {
-  color: white;
   font-size: 96px;
 }
 
@@ -42,19 +40,25 @@ h4 {
   font-size: 36px;
 }
 
+p {
+  font-size: 24px;
+}
+
 h1, h2, h3, h4, h5, h6 {
+  color: white;
   font-family: $headingFont;
 }
 
 a {
-  text-decoration: none;
+  font-size: 24px;
+  color: rgba(0, 0, 0, 0.5);
   position: relative;
   cursor: pointer;
+  text-decoration: underline;
   &:hover {
     text-decoration: underline;
-    color: black;
+    color: $tealColor;
   }
-
   h4  {
     color: #FFEEDE;
     text-decoration: underline;
@@ -115,18 +119,6 @@ section {
 
     h2, h4 {
       color: $tealColor;
-    }
-
-    p, a {
-      color: rgba(0, 0, 0, 0.5);
-      font-size: 24px;
-    }
-
-    a {
-      text-decoration: underline;
-      &:hover {
-        color: $tealColor;
-      }
     }
   }
 }
