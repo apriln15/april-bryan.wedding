@@ -82,6 +82,8 @@ ul {
 
 section {
   display: flex;
+  padding-left: 20px;
+  padding-right: 20px;
 
   .faded-content {
     &.reveal {
@@ -120,5 +122,19 @@ section {
     h2, h4 {
       color: $tealColor;
     }
+  }
+}
+
+@media (max-width: 550px) {
+  h1 {
+    font-size: 96px;
+  }
+
+  h2 {
+    font-size: 72px;
+  }
+  section, section:not(.parallax) {
+    padding-left: 0;
+    padding-right: 0;
   }
 }
