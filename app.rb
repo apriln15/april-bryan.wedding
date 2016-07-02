@@ -8,10 +8,19 @@ require 'sinatra/asset_pipeline'
 require "sinatra/reloader" if development?
 require "autoprefixer-rails"
 
+PARTIALS = [
+  'sections/_story',
+  'sections/_ceremony',
+  'sections/_reception',
+  'sections/_wedding_party',
+  'sections/_hotels',
+  'sections/_entertainment'
+].map(&:to_sym).freeze
+
 class App < Sinatra::Application
   configure do
     # Views
-    set :erb, layout_options: { views: 'views/layouts' }
+    set :haml, layout_options: { views: 'views/layouts' }
     set :public_folder, './public'
 
     # Assets
@@ -32,10 +41,6 @@ class App < Sinatra::Application
   end
 
   get '/' do
-    erb :index, layout: :application
-  end
-
-  # TODO: Implement this...
-  post '/message' do
+    haml :index, layout: :application
   end
 end

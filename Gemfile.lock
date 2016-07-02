@@ -12,6 +12,8 @@ GEM
     execjs (2.6.0)
     foreman (0.78.0)
       thor (~> 0.19.1)
+    haml (4.0.7)
+      tilt
     hike (1.2.3)
     json (1.8.3)
     multi_json (1.11.2)
@@ -63,6 +65,7 @@ PLATFORMS
 DEPENDENCIES
   autoprefixer-rails
   foreman
+  haml
   puma
   sass
   sinatra
@@ -71,4 +74,4 @@ DEPENDENCIES
   uglifier
 
 BUNDLED WITH
-   1.11.2
+   1.12.4

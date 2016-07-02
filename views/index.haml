@@ -1,0 +1,30 @@
+%section#header.full-height.centered.parallax(data-parallax="scroll" data-image-src="./images/pics_of_us/stairs.jpg")
+  .faded-content
+    .container
+      .row#page-header
+        .twelve.columns
+          %h1 April & Bryan
+          %h2 January 7, 2017
+
+- PARTIALS.each do |partial|
+  = haml partial
+
+%section#footer
+  .container
+    .row
+      .twelve.columns
+        %h2 Registries
+    .row
+      .twelve.columns
+        %a.registry_link( href="https://secure.williams-sonoma.com/registry/876lcbxf6r/registry-list.html" target="_blank" class="registry_link")
+          %img#williams_sonoma(src="/images/registries/williams_sonoma.png")
+        %a.registry_link( href="http://www.bedbathandbeyond.com/store/giftregistry/registry_search_guest.jsp?_requestid=632326" target="_blank")
+          %img(src="/images/registries/Bed_Bath_And_Beyond.png" id="bbandb")
+    .row#questions
+      .twelve.columns
+        %h2 Contact
+        %a(href="mailto:bryan.mikaelian@gmail.com") Mr. Mikaelian
+        %br
+        %a(href="mailto:april.gross83@gmail.com") The Future Mrs. Mikaelian
+        %br
+        %a(href="mailto:info@houseoftalesevents.com") Maya, Our Fabulous Wedding Planner

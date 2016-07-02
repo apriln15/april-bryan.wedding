@@ -2,6 +2,7 @@ source 'http://www.rubygems.org'
 
 gem 'autoprefixer-rails'
 gem 'foreman'
+gem 'haml'
 gem 'sass'
 gem 'sinatra'
 gem 'sinatra-contrib'
