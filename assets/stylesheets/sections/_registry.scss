@@ -1,0 +1,23 @@
+#registry-info {
+  .columns {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    a {
+      &:first-child {
+        margin-right: 20px;
+      }
+    }
+  }
+}
+
+a.registry_link {
+  img#williams_sonoma {
+    width: 100px;
+    height: auto;
+  }
+  img#bbandb {
+    width: 200px;
+    height: auto;
+  }
+}

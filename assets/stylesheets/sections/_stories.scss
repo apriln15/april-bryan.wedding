@@ -1,0 +1,14 @@
+#stories {
+  padding: 88px 20px;
+  border-bottom: 1px solid $lightSilverColor;
+  .row {
+    display: flex;
+    justify-content: flex-start;
+    text-align: left;
+    align-items: center;
+  }
+  h4 {
+    font-family: $bodyFont;
+    text-align: center;
+  }
+}

@@ -1,0 +1,132 @@
+@keyframes fade-content {
+  0% { background-color: rgba(0,0,0,1.0); }
+  100% { background-color: rgba(0,0,0,0.0); }
+}
+
+html, body {
+  height: 100%;
+}
+
+html {
+  font-size: 62.5%;
+}
+
+body {
+  text-align: center;
+  font-family: $bodyFont;
+  font-size: 20px;
+  color: $darkSilverColor;
+  background-color: $lightSilverColor;
+  margin: 0;
+  padding: 0;
+}
+
+h1 {
+  font-size: 128px;
+  color: white;
+  &.fancy {
+    font-size: 96px;
+  }
+}
+
+h2 {
+  color: white;
+  font-size: 96px;
+}
+
+h3 {
+  font-size: 48px;
+}
+
+h4 {
+  font-size: 36px;
+}
+
+h1, h2, h3, h4, h5, h6 {
+  font-family: $headingFont;
+}
+
+a {
+  text-decoration: none;
+  position: relative;
+  cursor: pointer;
+  &:hover {
+    text-decoration: underline;
+    color: black;
+  }
+
+  h4  {
+    color: #FFEEDE;
+    text-decoration: underline;
+  }
+}
+
+ul {
+  list-style: none;
+  li {
+    color: $darkSilverColor;
+    span {
+      font-size: 36px;
+      font-style: italic;
+      vertical-align: middle;
+    }
+    a {
+      display: inline-block;
+    }
+  }
+}
+
+section {
+  display: flex;
+
+  .faded-content {
+    &.reveal {
+      animation: fade-content 1s;
+    }
+
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background-color: rgba(0,0,0,0.25);
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    max-width: 100%;
+  }
+
+  &.full-height {
+    min-height: 100%;
+  }
+
+  &.half-height {
+    min-height: 50%;
+  }
+
+  &.centered {
+    align-items: center;
+  }
+
+  &:not(.parallax) {
+    color: $darkSilverColor;
+    background-color: $lightSilverColor;
+    align-content: center;
+    padding: 20px;
+    border-bottom: 1px solid $lightSilverColor;
+
+    h2, h4 {
+      color: $tealColor;
+    }
+
+    p, a {
+      color: rgba(0, 0, 0, 0.5);
+      font-size: 24px;
+    }
+
+    a {
+      text-decoration: underline;
+      &:hover {
+        color: $tealColor;
+      }
+    }
+  }
+}

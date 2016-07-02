@@ -1,0 +1,19 @@
+.image-frame {
+  border-radius: 4px;
+  min-width: 100%;
+  min-height: 500px;
+  border: 10px solid white;
+  background-position: center;
+  background-size: cover;
+  background-origin: padding-box;
+  background-repeat: no-repeat;
+
+
+  &.st-francis {
+    background-image: url('/images/locations/St_Francis.jpg');
+  }
+
+  &.the-laurel {
+    background-image: url('/images/locations/the_laurel.jpg');
+  }
+}

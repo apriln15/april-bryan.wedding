@@ -1,0 +1,56 @@
+@keyframes show-nav {
+  0% {
+    background-color: rgba(109, 118, 120, 0);
+    height: 0;
+    opacity: 0;
+  }
+
+  100% {
+     background-color: rgba(109, 118, 120, 1);
+     height: 44px;
+     opacity: 1.0
+   }
+}
+
+@keyframes hide-nav {
+  0% {
+     background-color: rgba(109, 118, 120, 1);
+     height: 44px;
+     opacity: 1;
+   }
+
+  100% {
+    background-color: rgba(109, 118, 120, 0);
+    height: 0;
+    opacity: 0;
+  }
+
+}
+
+nav {
+  height: 0;
+  opacity: 0;
+  background-color: rgba(109, 118, 120, 0.90);
+
+  position: fixed;
+  width: 100%;
+  z-index: 1000;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  p {
+    font-size: 28px;
+    margin-bottom: 0;
+    color: white;
+  }
+  &.visible {
+    height: 44px;
+    animation: show-nav 0.25s;
+    opacity: 1.0;
+  }
+  &.hiding {
+    animation: hide-nav 0.25s;
+    height: 0;
+    opacity: 0;
+  }
+}
