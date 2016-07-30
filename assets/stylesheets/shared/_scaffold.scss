@@ -50,6 +50,14 @@ h1, h2, h3, h4, h5, h6 {
 }
 
 a {
+  z-index: 1000;
+}
+
+a.image {
+  text-decoration: none;
+}
+
+a:not(.image) {
   font-size: 24px;
   color: rgba(0, 0, 0, 0.5);
   position: relative;
