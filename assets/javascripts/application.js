@@ -1,4 +1,5 @@
 //= require ./parallax
+//= require ./jquery.slides.min
 
 window.Wedding = {};
 
@@ -24,6 +25,23 @@ window.Wedding = {};
       },
     });
   }
+
+  $("#slides").slidesjs({
+    width: 940,
+    height: 528,
+    navigation: {
+      active: false
+    },
+    pagination: {
+    active: false,
+      effect: 'fade'
+    },
+    play: {
+      auto: true,
+      effect: 'fade',
+      interval: 5000
+    }
+  });
 })()
 
 Wedding.init();
