@@ -12,3 +12,24 @@
     min-width: 75px;
   }
 }
+
+#kids {
+  margin-bottom: 30px;
+  ul {
+    display: flex;
+    margin-left: auto;
+    margin-right: auto;
+    li {
+      flex: 1;
+      display: flex;
+      justify-content: center;
+    }
+
+    li:first-child {
+      align-self: flex-start;
+    }
+    li:last-child {
+      align-self: flex-end;
+    }
+  }
+}
