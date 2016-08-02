@@ -34,3 +34,10 @@
     .row#slideshow
       .twelve.columns
         #slides
+          - Dir.glob('./public/images/slideshow/*.jpg').each do |f|
+            - file_path = f.split("/")
+            - file_path.shift
+            - file_path.shift
+            - path = file_path.join("/")
+
+            %img(style="background-image: url('/#{path}')")

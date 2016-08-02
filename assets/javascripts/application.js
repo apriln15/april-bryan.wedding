@@ -28,7 +28,7 @@ window.Wedding = {};
 
   $("#slides").slidesjs({
     width: 940,
-    height: 528,
+    height: 680,
     navigation: {
       active: false
     },
@@ -39,7 +39,7 @@ window.Wedding = {};
     play: {
       auto: true,
       effect: 'fade',
-      interval: 5000
+      interval: 10000
     }
   });
 })()
