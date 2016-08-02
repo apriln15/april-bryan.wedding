@@ -34,7 +34,7 @@
     .row#slideshow
       .twelve.columns
         #slides
-          - Dir.glob('./public/images/slideshow/*.jpg').each do |f|
+          - Dir.glob('./public/images/slideshow/*.jpg').shuffle.each do |f|
             - file_path = f.split("/")
             - file_path.shift
             - file_path.shift
