@@ -17,6 +17,12 @@ a.registry_link {
     width: auto;
     margin-bottom: 20px;
 
+    &.williams {
+      width: 100%;
+      height: auto;
+      max-height: 110px;
+    }
+
     &:last-child {
       margin-bottom: 40px;
     }
